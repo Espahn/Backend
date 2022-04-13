@@ -7,25 +7,30 @@ class Usuario {
     }
 
     getFullName(){
-        return `${this.name} ${this.surname}`
+        return `${this.name} ${this.surname}`;
     }
 
-    addMascota([]){}
+    addMascota(nombreMascota){
+        return this.pets.push(nombreMascota);
+    }
 
     countMascotas(){
-        return this.pets.lenth;
+        return this.pets.length;
     }
     
-    addBook({}){}
+    addBook(arrayLibros){
+        return this.books.push(arrayLibros);
+    }
 
     getBookNames(){
-        return this.books.filter(nombre);
+        return this.books.map(item => item.nombre);
     }
 }
 
-const Persona = new Usuario('Eric', 'Spahn', [{nombre: 'Percy Jackson', autor: 'Rick Riordan'}, {nombre: 'I Am Number Four', autor: 'Pittacus Lore'}], ['Perra boxer', 'Perro caniche']);
-console.log(Persona.getFullName);
-console.log(Persona.addMascota);
-console.log(Persona.countMascotas);
-console.log(Persona.addBook);
-console.log(Persona.getBookNames);
+const usuario = new Usuario('Eric', 'Spahn', [{nombre: 'Percy Jackson', autor: 'Rick Riordan'}, {nombre: 'I Am Number Four', autor: 'Pittacus Lore'}], ['Perra boxer', 'Perro caniche']);
+console.log(usuario.getFullName());
+usuario.addMascota('Perro boston terrier');
+console.log(usuario.countMascotas());
+usuario.addBook({nombre: 'Harry Potter', autor: 'JK Rowling'});
+console.log(usuario.getBookNames());
+console.log(usuario);
