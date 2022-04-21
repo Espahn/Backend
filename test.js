@@ -1,0 +1,6 @@
+contenedor.leer()
+contenedor.save()
+contenedor.getById()
+contenedor.getAll()
+contenedor.deleteById()
+contenedor.deleteAll()
